@@ -1,5 +1,6 @@
 <div wire:ignore>
-    <select class="{{ $class }}" id="{{ $objId }}" {{ $multiple ? 'multiple' : '' }} style="width:100%" @disabled($disabled)>
+    <select class="{{ $class }}" id="{{ $objId }}" {{ $multiple ? 'multiple' : '' }} style="width:100%"
+        @disabled($disabled)>
         @foreach ($options as $option)
             <option value="{{ $option['id'] }}"
                 {{ isset($option['selected']) && $option['selected'] ? 'selected' : '' }}>
@@ -89,13 +90,13 @@
 
             if (multiple && multipleSelection) {
                 $(objId).on("select2:selecting", (e) => {
-                    if (e.params.args.data.id.startsWith('_typed_')) {
+                    if (e.params.args.data.id.toString().startsWith('_typed_')) {
                         e.preventDefault();
                         $(e.target).select2('close');
 
                         let $select = $(e.target);
                         let params = {
-                            q: e.params.args.data.id.replace('_typed_', ''),
+                            q: e.params.args.data.id.toString().replace('_typed_', ''),
                         };
 
                         // Show loading indicator
