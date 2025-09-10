@@ -60,7 +60,7 @@
 
             if (url) {
                 config.ajax = {
-                    url: url,
+                    url: url.replace(/&amp;/g, '&'),
                     dataType: 'json',
                     delay: debounceTime,
                     processResults: (data, params) => {
@@ -105,7 +105,7 @@
 
                         // Fetch all matching options
                         $.ajax({
-                            url: url,
+                            url: url.replace(/&amp;/g, '&'),
                             dataType: 'json',
                             data: params,
                             success: function(data) {
