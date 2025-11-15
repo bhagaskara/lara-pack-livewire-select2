@@ -55,7 +55,7 @@
             }
 
             if (dropdownParent) {
-                config.dropdownParent = dropdownParent;
+                config.dropdownParent = $(dropdownParent);
             }
 
             if (url) {
