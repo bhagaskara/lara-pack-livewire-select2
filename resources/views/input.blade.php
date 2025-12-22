@@ -96,7 +96,8 @@
 
                         let $select = $(e.target);
                         let params = {
-                            q: e.params.args.data.id.toString().replace('_typed_', ''),
+                            q: e.params.args.data.id.toString().replace('_typed_', '').replace('undefined', ''),
+                            limit: -1
                         };
 
                         // Show loading indicator
