@@ -1,26 +1,26 @@
 {
-    "name": "lara-pack/livewire-select2",
-    "description": "Livewire Component : Select2",
-    "license": "MIT",
-    "require": {
-        "livewire/livewire": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "LaraPack\\LivewireSelect2\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Bhagaskara",
-            "email": "bhagaskaraliancer@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "LaraPack\\LivewireSelect2\\LivewireSelect2Provider"
-            ]
-        }
+  "name": "lara-pack/livewire-select2",
+  "description": "Livewire Component : Select2",
+  "license": "MIT",
+  "require": {
+    "livewire/livewire": "^3.0|^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaraPack\\LivewireSelect2\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Bhagaskara",
+      "email": "bhagaskaraliancer@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaraPack\\LivewireSelect2\\LivewireSelect2Provider"
+      ]
+    }
+  }
 }

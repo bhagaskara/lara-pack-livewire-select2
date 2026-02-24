@@ -1,12 +1,12 @@
 # Livewire Select2 Component
 
-A custom Livewire V3 component wrapper for **Select2**. This component simplifies the usage of Select2 in your Livewire projects, supporting both static options arrays and AJAX-based remote data loading, along with multiple selections capabilities.
+A custom Livewire V3/V4 component wrapper for **Select2**. This component simplifies the usage of Select2 in your Livewire projects, supporting both static options arrays and AJAX-based remote data loading, along with multiple selections capabilities.
 
 ## Requirements
 
 - PHP 8.1+
 - Laravel 10+ / 11+
-- Livewire ^3.0
+- Livewire ^3.0\|^4.0
 - jQuery
 - Select2 (JS & CSS)
 
