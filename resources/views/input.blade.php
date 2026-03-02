@@ -96,7 +96,8 @@
 
                         let $select = $(e.target);
                         let params = {
-                            q: e.params.args.data.id.toString().replace('_typed_', '').replace('undefined', ''),
+                            q: e.params.args.data.id.toString().replace('_typed_', '').replace(
+                                'undefined', ''),
                             limit: -1
                         };
 
@@ -128,12 +129,21 @@
                         id: item.id,
                         text: item.text
                     }));
-                    @this.set('value', selectedData);
+                    if (selectedData.length === 0) {
+                        @this.set('value', null);
+                    } else {
+                        @this.set('value', selectedData);
+                    }
                 } else {
-                    @this.set('value', {
-                        id: $(objId).val(),
-                        text: $(objId).find("option:selected").text()
-                    });
+                    let val = $(objId).val();
+                    if (!val) {
+                        @this.set('value', null);
+                    } else {
+                        @this.set('value', {
+                            id: val,
+                            text: $(objId).find("option:selected").text()
+                        });
+                    }
                 }
             })
 
